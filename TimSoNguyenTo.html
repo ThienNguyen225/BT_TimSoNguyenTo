@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập số nguyên tố</title>
+</head>
+<body>
+    <script>
+        let num = parseInt(prompt());
+        let dem = 0;
+        let tang = 0;
+        for (let i = 2; dem < num; i++){
+            if (timNguyento(i)){
+                document.write( i + 'Là số nguyên tố <br/>');
+                dem++;
+            }
+        }
+        function timNguyento(nguyento) {
+            let flag = true;
+            if (nguyento > 2) {
+                for (let a = 2; a < nguyento; a++) {
+                    if (nguyento % a === 0) {
+                        flag = false;
+                    }
+                }
+            }
+            else if (nguyento < 2)flag = false;
+            return flag;
+        }
+    </script>
+</body>
+</html>
